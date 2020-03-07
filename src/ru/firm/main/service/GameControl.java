@@ -40,17 +40,12 @@ public class GameControl {
     }
 
     private void computerMove() {
-        int matchesInComputerMove;
-
         notifications.showComputerIsMoving();
-        matchesInComputerMove = computerLogic.calculateMatchesCountForComputerMove(this.matchesLeft, this.matchesInLastUserMove);
         this.lastMover = "Computer";
-        this.matchesLeft = this.matchesLeft - matchesInComputerMove;
+        this.matchesLeft = this.matchesLeft - computerLogic.calculateMatchesCountForComputerMove(this.matchesLeft, this.matchesInLastUserMove);
     }
 
     private void gameStatusCheck() {
-        String winner;
-
         notifications.showCurrentStatus(this.matchesLeft);
         if (this.matchesLeft == 1) {
             notifications.showTheWinner(this.lastMover);
@@ -58,7 +53,6 @@ public class GameControl {
     }
 
     public void playGame() {
-
         notifications.showGameStarted();
         gameStatusCheck();
 

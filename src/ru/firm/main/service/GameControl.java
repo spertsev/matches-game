@@ -53,7 +53,6 @@ public class GameControl {
 
         notifications.showCurrentStatus(this.matchesLeft);
         if (this.matchesLeft == 1) {
-            //winner = this.lastMover.equals("computer") ? "user" : "computer";
             winner = this.lastMover;
             notifications.showTheWinner(winner);
         }

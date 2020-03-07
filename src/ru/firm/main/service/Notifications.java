@@ -2,7 +2,7 @@ package ru.firm.main.service;
 
 public class Notifications {
 
-    public void showGameStarted () {
+    public void showGameStarted() {
         System.out.println("The game is started!");
     }
 

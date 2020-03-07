@@ -53,8 +53,7 @@ public class GameControl {
 
         notifications.showCurrentStatus(this.matchesLeft);
         if (this.matchesLeft == 1) {
-            winner = this.lastMover;
-            notifications.showTheWinner(winner);
+            notifications.showTheWinner(this.lastMover);
         }
     }
 
